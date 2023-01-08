@@ -1,7 +1,8 @@
 # StatLib
 ## 개요
 - Minecraft ForgeMod 및 Plugin 개발에 사용할 라이브러리.
-- StatLib-Processor 와 같이 사용시 컴파일러수준 Annotation 경고 제공.
+- StatLib-Processor 와 같이 사용시 컴파일러수준 Annotation 오류 제공.
+   - 미사용시 오류가 발생하지 않으나, 일부 상황에서 연산 결과 문제가 발생할 수 있음.
 
 ## 사용 방법
 1. IStat을 상속한 스탯 클래스 제작.
