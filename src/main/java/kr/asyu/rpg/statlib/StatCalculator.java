@@ -19,7 +19,7 @@ public class StatCalculator<T> {
 
     @SuppressWarnings("unchecked")
     @Nullable
-    public static <T> StatCalculator<T> getInstance(Class<T> clazz) {
+    public static <T> StatCalculator<T> getInstance(@NotNull Class<T> clazz) {
         if (calculators.containsKey(clazz)) {
             return (StatCalculator<T>) calculators.get(clazz);
         }
