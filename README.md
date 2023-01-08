@@ -96,3 +96,6 @@ Test{STR=1, DEX=2, INT=3, LUK=4}
 Test{STR=4, DEX=3, INT=2, LUK=1}
 Test{STR=5, DEX=5, INT=5, LUK=5}
 ```
+
+## 비고
+- IStat 을 상속해 만든 클래스에 hashCode, equals, toString 를 오버라이드해 재정의 하기.
