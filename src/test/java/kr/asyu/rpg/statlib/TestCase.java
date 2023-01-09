@@ -10,12 +10,6 @@ public class TestCase {
     }
 
     @Test
-    public void Test_StatCalculator_GetInstance_Argument_NotIStatClass() {
-        StatCalculator<Long> calculator = StatCalculator.getInstance(Long.class);
-        assert calculator == null;
-    }
-
-    @Test
     public void Test_StatCalculator_SumToLeft() {
         StatCalculator<SimpleStat> calculator = StatCalculator.getInstance(SimpleStat.class);
 

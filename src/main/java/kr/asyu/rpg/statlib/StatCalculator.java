@@ -14,12 +14,12 @@ import kr.asyu.rpg.statlib.annotations.StatSumFunction;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class StatCalculator<T> {
+public class StatCalculator<T extends IStat> {
     private static final Map<Class<?>, StatCalculator<?>> calculators = new HashMap<>();
 
     @SuppressWarnings("unchecked")
     @Nullable
-    public static <T> StatCalculator<T> getInstance(@NotNull Class<T> clazz) {
+    public static <T extends IStat> StatCalculator<T> getInstance(@NotNull Class<T> clazz) {
         if (calculators.containsKey(clazz)) {
             return (StatCalculator<T>) calculators.get(clazz);
         }
@@ -52,7 +52,7 @@ public class StatCalculator<T> {
     }
 
     @Nullable
-    private T newInstance() {
+    T newInstance() {
         try {
             return this.constructor.newInstance();
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {

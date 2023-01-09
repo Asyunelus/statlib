@@ -4,7 +4,7 @@ import kr.asyu.rpg.statlib.annotations.FloatStatMember;
 import kr.asyu.rpg.statlib.annotations.FloatSumType;
 import kr.asyu.rpg.statlib.annotations.IntegerStatMember;
 
-public class SimpleStat {
+public class SimpleStat implements IStat {
     @IntegerStatMember
     public Long STR = 0L;
 
@@ -27,7 +27,17 @@ public class SimpleStat {
     public Double MaxHP_Percent = 0.0d;
 
     public SimpleStat() {
+        reset();
+    }
 
+    public void reset() {
+        STR = 0L;
+        DEX = 0L;
+        INT = 0L;
+        LUK = 0L;
+        DefenseIgnorePercent = 0.0d;
+        PvEDamage = 0.0d;
+        MaxHP_Percent = 0.0d;
     }
 
     @Override
